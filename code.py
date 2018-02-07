@@ -7,16 +7,17 @@ import os
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("index.html")
-#class MainHandler(tornado.web.RequestHandler):
-#    def get(self):
-#       self.render('login.html')
+class LinkHandler(tornado.web.RequestHandler):
+    def get(self):
+       self.render("link.html")
 
 settings = {
 "static_path": os.path.join(os.path.dirname(__file__), "static") 
 }
 
 application = tornado.web.Application([
-    (r"/index", MainHandler),],**settings
+    (r"/", MainHandler),
+    (r"/link",LinkHandler)],**settings
 )
 
 if __name__ == "__main__":
