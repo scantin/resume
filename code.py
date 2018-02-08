@@ -10,6 +10,9 @@ class MainHandler(tornado.web.RequestHandler):
 class LinkHandler(tornado.web.RequestHandler):
     def get(self):
        self.render("link.html")
+class ResumeHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render("resume.html")    
 
 settings = {
 "static_path": os.path.join(os.path.dirname(__file__), "static") 
