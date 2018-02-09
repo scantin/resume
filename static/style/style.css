@@ -480,6 +480,13 @@ p.tick {
     float: left;
 }
 
+#videobar {
+    width: 640px;
+    height: 360px;
+    margin-left: 320px;
+    line-height: 10px;
+}
+
 #navigation {
     float: right;
     height: 40px;
